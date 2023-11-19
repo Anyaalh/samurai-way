@@ -31,6 +31,7 @@ function App() {
             </nav>
 
             <div className={'content'}>
+
                 <img alt={""} src={"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"}/>
                 <div>
                     ava + description
@@ -49,6 +50,7 @@ function App() {
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
