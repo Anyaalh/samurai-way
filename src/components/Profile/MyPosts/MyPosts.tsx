@@ -12,9 +12,10 @@ export function MyPosts(){
                 <button>Remove post</button>
             </div>
             <div className={s.posts}>
-            <Post/>
-            <Post/>
-            <Post/>
+
+            <Post message={"Hello? how are you?"} likeCount={1}/>
+            <Post message={"It's my first post"} likeCount={4}/>
+
             </div>
 
         </div>
