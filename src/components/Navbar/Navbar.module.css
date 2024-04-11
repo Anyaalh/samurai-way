@@ -3,10 +3,17 @@
     background-color: darkmagenta;
 }
 
-.item {
-    color: white;
+.item{
+    list-style-type: none;
+    margin-top: 10px;
 }
 
-.item.active {
+.item a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.item a.activeLink{
     color: coral;
 }
