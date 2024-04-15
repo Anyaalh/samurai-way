@@ -1,9 +1,9 @@
-import s from "./Dialogs.module.css";
+import s from "../Dialogs.module.css"
 import {NavLink} from "react-router-dom";
 
 type DialogItemType = {
     title: string
-    id: string
+    id: number
 }
 
 export const DialogItem = ({title, id}: DialogItemType) => {

@@ -1,9 +1,23 @@
 import React from "react";
 import s from "./MyPosts.module.css"
 import {Post} from "./Post/Post";
+import {PostsDataType} from "../Profile";
 
-export function MyPosts(){
-   return (
+// type PostsDataType ={
+//     id: number
+//     message: string
+//     likeCount: number
+// }
+type MyPostsType = {
+    posts: PostsDataType
+}
+
+export function MyPosts({posts}: MyPostsType) {
+    // let postsData: PostsDataType[] = [
+    //     {id: 1, message: "Hello? how are you?", likeCount: 1},
+    //     {id: 4, message: `It's my first post`, likeCount: 4}
+    // ]
+    return (
         <div className={s.postBlock}>
             My posts
             <div>
@@ -16,12 +30,9 @@ export function MyPosts(){
                 </div>
             </div>
             <div className={s.posts}>
-
-            <Post message={"Hello? how are you?"} likeCount={1}/>
-            <Post message={"It's my first post"} likeCount={4}/>
-
-            </div>
+                {posts.map(el=><Post message={el.message} likeCount={el.likeCount} id={el.id}/>)}
+                       </div>
 
         </div>
-   )
+    )
 }
